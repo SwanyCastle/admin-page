@@ -74,6 +74,16 @@ let year, month, date;
 year = now.getFullYear();
 month = now.getMonth() + 1;
 date = now.getDate();
+day = now.getDay();
+
+let dict = {};
+dict["1"] = "월";
+dict["2"] = "화";
+dict["3"] = "수";
+dict["4"] = "목";
+dict["5"] = "금";
+dict["6"] = "토";
+dict["7"] = "일";
 
 if (month < 10) {
   month = "0" + month;
@@ -83,7 +93,7 @@ if (date < 10) {
   date = "0" + date;
 }
 
-updateTime.textContent = `${year}-${month}-${date}`;
+updateTime.textContent = `${year}-${month}-${date}-${dict[day]}`;
 
 // dark mode
 const light_btn = document.getElementById("btnradio_ligth");
