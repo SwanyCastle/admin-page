@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" id="index" data-bs-theme="light">
   <head>
     <title>Admin Page</title>
     <link
@@ -12,39 +12,63 @@
   <body>
     <div class="container mt-3">
       <div class="position-relative">
-        <label class="mt-5 mb-3" style="font-size: 30px">신규 등록 상품</label>
+        <label class="mt-5 mb-3" style="font-size: 50px">신규 등록 상품</label>
         &nbsp;&nbsp;
         <label
           class="mt-5 mb-3"
-          style="font-size: 15px"
+          style="font-size: 20px"
           id="update-time"
         ></label>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a
-          class="icon-link icon-link-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover position-absolute bottom-0 end-0"
-          style="--bs-icon-link-transform: translate3d(0, -0.125rem, 0)"
-          href="https://github.com/SwanyCastle"
-          target="_blank"
+        <div
+          class="btn-group mb-3 position-absolute top-0 end-0"
+          role="group"
+          aria-label="Basic radio toggle button group"
         >
-          <img
-            class="bi"
-            aria-hidden="true"
-            src="github.svg"
-            style="width: 30px; height: 30px"
+          <input
+            type="radio"
+            class="btn-check"
+            name="btnradio"
+            id="btnradio_ligth"
+            autocomplete="off"
+            checked
           />
-          GitHub link
-        </a>
+          <label
+            class="btn btn-outline-primary rounded-start-pill"
+            for="btnradio_ligth"
+            ><img
+              src="sun.png"
+              alt="lightmode"
+              style="width: 20px; height: 20px"
+          /></label>
+          <input
+            type="radio"
+            class="btn-check"
+            name="btnradio"
+            id="btnradio_dark"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-secondary rounded-end-circle"
+            for="btnradio_dark"
+            ><img
+              src="moon.png"
+              alt="darkmode"
+              style="width: 20px; height: 20px"
+          /></label>
+        </div>
       </div>
       <form class="row g-3 align-items-center">
-        <div class="col-auto"></div>
+        <div class="col-auto mb-3">
+          <select class="form-select form-select" id="inputGroupSelect01">
+            <option value="category" selected>카테고리</option>
+            <option value="brand">브랜드</option>
+            <option value="product-name">상품명</option>
+            <option value="price">가격</option>
+          </select>
+        </div>
         <div class="col-4">
           <div class="input-group mb-3">
-            <select class="form-select form-select-sm" id="inputGroupSelect01">
-              <option value="category" selected>카테고리</option>
-              <option value="brand">브랜드</option>
-              <option value="product-name">상품명</option>
-              <option value="price">가격</option>
-            </select>
             <input
               type="text"
               class="form-control"
@@ -52,11 +76,7 @@
               aria-label="Recipient's username"
               aria-describedby="button-addon2"
             />
-            <button
-              class="btn btn-primary btn-outline-light"
-              type="button"
-              id="button-addon2"
-            >
+            <button class="btn btn-primary" type="button" id="button-addon2">
               조회
             </button>
           </div>
@@ -112,21 +132,37 @@
           </tbody>
         </table>
       </div>
-      <nav aria-label="...">
-        <ul class="pagination pagination-sm justify-content-end">
-          <li class="page-item disabled">
-            <a class="page-link">Previous</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item active" aria-current="page">
-            <a class="page-link" href="#">2</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="d-flex justify-content-between">
+        <a
+          class="icon-link icon-link-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+          style="--bs-icon-link-transform: translate3d(0, -0.125rem, 0)"
+          href="https://github.com/SwanyCastle"
+          target="_blank"
+        >
+          <img
+            class="bi"
+            aria-hidden="true"
+            src="github.svg"
+            style="width: 30px; height: 30px"
+          />
+          GitHub link
+        </a>
+        <nav aria-label="...">
+          <ul class="pagination pagination-sm mt-3">
+            <li class="page-item disabled">
+              <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
     <!-- 페이지 네이션 코드를 넣어주세요 -->
     <script src="index.js">

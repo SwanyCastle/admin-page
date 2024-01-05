@@ -84,3 +84,17 @@ if (date < 10) {
 }
 
 updateTime.textContent = `${year}-${month}-${date}`;
+
+// dark mode
+const light_btn = document.getElementById("btnradio_ligth");
+const dark_btn = document.getElementById("btnradio_dark");
+
+light_btn.addEventListener("click", function () {
+  const index_html = document.getElementById("index");
+  index_html.setAttribute("data-bs-theme", "light");
+});
+
+dark_btn.addEventListener("click", function () {
+  const index_html = document.getElementById("index");
+  index_html.setAttribute("data-bs-theme", "dark");
+});
