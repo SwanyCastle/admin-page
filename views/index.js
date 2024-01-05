@@ -41,6 +41,7 @@ data.forEach((item) => {
   cnt++;
 });
 
+// checkbox select
 const allChkbox = document.getElementById("all-checkbox");
 const chkbox0 = document.getElementById("checkbox0");
 const chkbox1 = document.getElementById("checkbox1");
@@ -66,6 +67,22 @@ allChkbox.addEventListener("click", function () {
     isChecked = false;
   }
 });
+
+// dark mode
+const light_btn = document.getElementById("btnradio_ligth");
+const dark_btn = document.getElementById("btnradio_dark");
+
+light_btn.addEventListener("click", function () {
+  const index_html = document.getElementById("index");
+  index_html.setAttribute("data-bs-theme", "light");
+});
+
+dark_btn.addEventListener("click", function () {
+  const index_html = document.getElementById("index");
+  index_html.setAttribute("data-bs-theme", "dark");
+});
+
+// current time display
 const updateTime = document.getElementById("update-time");
 
 let now = new Date();
@@ -94,17 +111,3 @@ if (date < 10) {
 }
 
 updateTime.textContent = `${year}-${month}-${date}-${dict[day]}`;
-
-// dark mode
-const light_btn = document.getElementById("btnradio_ligth");
-const dark_btn = document.getElementById("btnradio_dark");
-
-light_btn.addEventListener("click", function () {
-  const index_html = document.getElementById("index");
-  index_html.setAttribute("data-bs-theme", "light");
-});
-
-dark_btn.addEventListener("click", function () {
-  const index_html = document.getElementById("index");
-  index_html.setAttribute("data-bs-theme", "dark");
-});
