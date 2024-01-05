@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Admin Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-3">
+      <div class="position-relative">
+        <label class="mt-5 mb-3" style="font-size: 30px">신규 등록 상품</label>
+        &nbsp;&nbsp;
+        <label
+          class="mt-5 mb-3"
+          style="font-size: 15px"
+          id="update-time"
+        ></label>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a
+          class="icon-link icon-link-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover position-absolute bottom-0 end-0"
+          style="--bs-icon-link-transform: translate3d(0, -0.125rem, 0)"
+          href="https://github.com/SwanyCastle"
+          target="_blank"
+        >
+          <img
+            class="bi"
+            aria-hidden="true"
+            src="github.svg"
+            style="width: 30px; height: 30px"
+          />
+          GitHub link
+        </a>
+      </div>
+      <form class="row g-3 align-items-center">
+        <div class="col-auto"></div>
+        <div class="col-4">
+          <div class="input-group mb-3">
+            <select class="form-select form-select-sm" id="inputGroupSelect01">
+              <option value="category" selected>카테고리</option>
+              <option value="brand">브랜드</option>
+              <option value="product-name">상품명</option>
+              <option value="price">가격</option>
+            </select>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="제품명을 입력해주세요"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-primary btn-outline-light"
+              type="button"
+              id="button-addon2"
+            >
+              조회
+            </button>
+          </div>
+        </div>
+        <div class="col-1">
+          <div
+            class="btn-group mb-3"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio1"
+              autocomplete="off"
+              checked
+            />
+            <label class="btn btn-outline-primary" for="btnradio1">남</label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio2"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="btnradio2">여</label>
+          </div>
+          <!-- 조회버튼 코드를 넣어주세요 -->
+        </div>
+      </form>
+      <div class="container">
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th style="width: 10px">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="all-checkbox"
+                />
+              </th>
+              <th scope="col">카테고리</th>
+              <th scope="col">브랜드</th>
+              <th scope="col">상품명</th>
+              <th scope="col">가격</th>
+            </tr>
+            <!-- 열의 속성값을 나타내는 코드를 작성해주세요 (예 : 카테고리, 브랜드, 상품명, 가격) -->
+          </thead>
+          <tbody class="table-group-divider" id="data-table">
+            <!-- 추후 크롤링한 데이터가 들어가는 자리 -->
+          </tbody>
+        </table>
+      </div>
+      <nav aria-label="...">
+        <ul class="pagination pagination-sm justify-content-end">
+          <li class="page-item disabled">
+            <a class="page-link">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- 페이지 네이션 코드를 넣어주세요 -->
+    <script src="index.js">
+      // 크롤링한 데이터를 아래와 같은 형태의 객체 배열로 가정합니다.
+      // 추후 데이터베이스에 있는 데이터를 쿼리문으로 불러 올 수 있게 쿼리르 작성해 볼 수 있음
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
